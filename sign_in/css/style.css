@@ -1,0 +1,93 @@
+.bodyOfForm
+{
+	/*background:url('../pictures/black.jpg')fixed;*/
+	border-radius: 10px;
+    background-color: rgba(5, 217, 111, 0.79);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.nameMargin
+{
+	margin-top: 5%;
+}
+.scrolBarOfForm
+{
+	background-color: rgba(255, 255, 255, 0.99);
+	margin-left: 20%;
+	margin-right: 25%;
+	margin-top: 10%;
+	margin-bottom: 10%;
+}
+.forMargining
+{
+	padding-left: 15%;
+	padding-top: 15%;
+	padding-right: 15%;
+	padding-bottom: 8%;
+	margin-left: 0%;
+	margin-top: 20%;
+}
+.inputTypeText, .inputTypePass
+{
+	border-radius: 5px;
+	margin-left:;
+	font-size: 20px;
+	background-color: rgba(0,0,0 0.9);	
+	width: 80%;
+}
+.labelMargin
+{
+	font-size: 20px;
+}
+input[type=radio] {
+	line-height: 10px;
+    border: 0px;
+    width: 15%;
+    height: 2em;
+}
+.PhoneNumber, .email, .DateOfBirth
+{
+	width: 80%;
+	border-radius: 5px;
+	margin-left:;
+	font-size: 20px;
+}
+.genderSelectionClass
+{
+	margin-left: ;
+
+}
+.submissionOfFormClass
+{
+	margin-bottom: 8%;
+	margin-left:;
+}
+.nextStepClass, .submissionOfFormClass, .userName,  .genderSelectionClass
+{
+	border-radius: 5px;
+	margin-top: 3%;
+	float: center;
+	width: 80%;
+	height: 2.9em;
+}#submissionOfFormID
+{
+	margin-left: 5%;
+	border-radius: 5px;
+	width: 80%;
+	height: 2.9em;
+	margin-bottom: 8%;
+}
+.greevDiv
+{
+	color: green;
+}
+.iconSizing
+{
+	color: rgba(5, 217, 111, 0.79);
+	font-size: 20px;	
+}
+.submissionOfFormClass
+{
+	width:90%;
+}
