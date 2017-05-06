@@ -8,7 +8,7 @@ body {
 }
 
 a {
-  color: ##18e385;
+  color: ##2ef97e;
   transition: 0.5s;
 }
 
@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .back-to-top:hover {
-  background: #18e385;
+  background: #2ef97e;
   color: #fff;
 }
 
@@ -149,24 +149,24 @@ h1, h2, h3, h4, h5, h6 {
   margin: 10px;
 }
 
-#hero .btn-get-started {
+#hero .btn-login {
   background: rgb(46, 249, 126);
   border: 3px solid #f5f5f5;
   color: #fff;
 }
 
-#hero .btn-get-started:hover {
+#hero .btn-login:hover {
   background: none;
   border: 2px solid #fff;
   color: #fff;
 }
 
-#hero .btn-services {
+#hero .btn-signup {
   border: 2px solid #fff;
   color: #fff;
 }
 
-#hero .btn-services:hover {
+#hero .btn-signup:hover {
   background: rgb(46, 249, 126);
   border: 3px solid #f5f5f5;
 }
@@ -175,9 +175,9 @@ h1, h2, h3, h4, h5, h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #2ef97e;
-  padding: 20px 0;
-  height: 90px;
+  background: rgb(46, 249, 126);
+  padding: 10px 0;
+  height: 70px;
 }
 
 #header #logo {
@@ -218,7 +218,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .is-sticky #header {
-  background:#03c5ec;
+  background:rgba(204, 204, 204, 0.6);
 }
 
 /*--------------------------------------------------------------
@@ -327,7 +327,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul li a {
-  color: #18e385;
+  color: #2ef97e;
 }
 
 .nav-menu ul ul {
@@ -413,11 +413,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #18e385;
+  color: #2ef97e;
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #18e385;
+  color: #2ef97e;
 }
 
 #mobile-body-overly {
@@ -451,7 +451,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 .section-title {
   font-size: 32px;
-  color: #18e385;
+  color: #2ef97e;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
@@ -461,14 +461,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   text-align: center;
   margin-bottom: 40px;
   font-size: 20px;
-}
-
-.section-title-divider {
-  width: 50px;
-  height: 3px;
-  background: #18e385;
-  margin: 0 auto;
-  margin-bottom: 20px;
 }
 
 /* Get Started Section
@@ -540,8 +532,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #subscribe .subscribe-btn:hover {
-  background: #18e385;
-  border: 2px solid #18e385;
+  background: #2ef97e;
+  border: 2px solid #2ef97e;
 }
 
 /* Tutorial Section
@@ -565,7 +557,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #tutorial .tutorial-item .details {
   height: 260px;
-  background: #18e385;
+  background: #2ef97e;
   display: table-cell;
   vertical-align: middle;
   opacity: 0;
@@ -616,12 +608,12 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 80px 0;
 }
 
-#coding .profile {
+#coding .pictureBox {
   text-align: center;
 }
 
-#coding .profile .pic {
-  border-radius: 70%;
+#coding .pictureBox .pic {
+  border-radius: 30%;
   border: 6px solid #fff;
   margin-bottom: 15px;
   overflow: hidden;
@@ -629,17 +621,17 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 260px;
 }
 
-#coding .profile .pic img {
+#coding .pictureBox .pic img {
   max-width: 100%;
 }
 
-#coding .profile h4 {
+#coding .pictureBox h4 {
   font-weight: 700;
-  color: #18e385;
+  color: #2ef97e;
   margin-bottom: 5px;
 }
 
-#coding .profile span {
+#coding .pictureBox span {
   color: #333333;
 }
 
@@ -688,7 +680,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 #contact .info i {
   font-size: 32px;
-  color: #18e385;
+  color: #2ef97e;
   float: left;
 }
 
@@ -698,8 +690,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form #sendmessage {
-  color: #18e385;
-  border: 1px solid #18e385;
+  color: #2ef97e;
+  border: 1px solid #2ef97e;
   display: none;
   text-align: center;
   padding: 15px;
@@ -735,7 +727,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #contact .form button[type="submit"] {
-  background: #18e385;
+  background: #2ef97e;
   border: 0;
   padding: 10px 24px;
   color: #fff;
