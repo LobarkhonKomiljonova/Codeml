@@ -1,28 +1,30 @@
 <?php
-$get_id = $_GET['id'];
-session_start();
+  $get_id = $_GET['id'];
+  session_start();
+  if (isset($_SESSION["user"]) && ($_SESSION["user"] ==1)) 
+  {
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "codeml";
+  $conn = new mysqli($servername, $username, $password, $dbname);
+  // Check connection
+  if ($conn->connect_error) {
+       die("Connection failed: " . $conn->connect_error);
+  }
+  $userid = $_SESSION['user_id'];
+  if (isset($_POST['submit'])){
+  $text = $_POST['answer'];
+  $code = $_POST['comment'];
+  $i_query = "INSERT INTO d_question( ";
+  $i_query .= "user_id, question_id, full_text, scfq ";
+  $i_query .= ") VALUES (";
+  $i_query .= "{$userid}, {$get_id}, '{$text}', '{$code}')";
+  ;
+  $conn->query($i_query);
 
-      $servername = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "codeml";
-      $conn = new mysqli($servername, $username, $password, $dbname);
-      // Check connection
-      if ($conn->connect_error) {
-           die("Connection failed: " . $conn->connect_error);
-      }
-      $userid = $_SESSION['username'];
-      if (isset($_POST['submit'])){
-      $text = $_POST['answer'];
-      $code = $_POST['comment'];
-      $i_query = "INSERT INTO d_question( ";
-      $i_query .= "user_id, question_id, full_text, scfq ";
-      $i_query .= ") VALUES (";
-      $i_query .= "{$userid}, {$get_id}, '{$text}', '{$code}')";
-      ;
-      $conn->query($i_query);
+  }
 
-      }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -69,19 +71,23 @@ session_start();
       <!-- #nav-menu-container -->
       <nav id="nav-menu-container">
         <ul class="nav-menu">
+          <li><a href="question.php">ADD</a></li>
           <li><a href="../../index.html">Home</a></li>
           <li><a href="">Questions</a></li>
           <li><a href="../../editor.html">Editor</a></li>
           <li><a href="../../quiz">Quiz</a></li>
+          <li><a href="logout.php">Logout</a></li>
+          <li><i class="fa fa-user fa" style="font-size: 20px; color: blue;" aria-hidden="true"><a href="#"><?php echo $_SESSION["user_name"];?></a> </i></li>
         </ul>
       </nav>
     </div>
   </div>
+
 <?php
 $query = "SELECT q.user_id, q.g_question, q.keywords, ";
 $query .= "q.top_val, q.uploaded_date, q.c_user, u.user_name ";
 $query .= "FROM question q ";
-$query .=" JOIN user_info u ON u.id = q.user_id ";
+$query .=" JOIN users u ON u.id = q.user_id ";
 $query .= "WHERE q.top_val = {$get_id} ";
 
 // echo $query;
@@ -109,7 +115,6 @@ if (!$main)
           
         <?php
         $test_query = "SELECT * FROM d_question d ";
-        //$test_query = "JOIN user_info u "
         $test_query .= "WHERE d.question_id = {$get_id}";
         $test = $conn->query($test_query);
         if ($test->num_rows!= 0)
@@ -122,7 +127,7 @@ if (!$main)
            while ($row1 = $test->fetch_assoc()){
              $user_id = $row1['user_id'];
              $query1 = "SELECT user_name ";
-             $query1 .= "FROM user_info u WHERE u.id = {$user_id}";
+             $query1 .= "FROM users u WHERE u.id = {$user_id}";
              $send = $conn->query($query1);
              $send_res = $send->fetch_assoc();
              ?>
@@ -186,3 +191,9 @@ if (!$main)
 <script src="../../js/custom.js"></script>
 </body>
 </html>
+<?php
+}
+elseif (!isset($_SESSION["useer"]) || $_SESSION["user"]!=1) {
+header("Location: ../../copied/signin.php");
+}
+?>

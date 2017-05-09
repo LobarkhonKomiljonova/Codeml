@@ -31,77 +31,63 @@
 
 <body>
 
-<header id="header">
+<!--==========================
+  Header Section
+============================-->
+  <header id="header">
     <div class="container">
     
       <div id="logo" class="pull-left">
-        <a href="#hero"><img src="images/dark.png" alt="logo"/></img></a>
+        <a href="#hero"><img src="images/wlogo.png" alt="logo"/></img></a>
 
       </div>
-        
       <nav id="nav-menu-container">
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Home</a></li>
-          <li><a href="#tutorial">Menu-1</a></li>
-          <li><a href="#about">Menu-2</a></li>
-          <li><a href="#subscribe">Menu-3</a></li>          
-          <li><a href="#coding">Menu-4</a></li>
-          <li><a href="#contact">Menu-5</a></li>
+          <li><a href="tutorials/tutorial.php?id=1">Tutorial</a></li>
+          <li><a href="editor/editor.html">Editor</a></li>
+          <li><a href="quiz.html">Quiz</a></li>          
+          <li><a href="sign_in/html/index.php">Question</a></li>
+          <li><a href="#contuctus">Contuct Us</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
     </div>
   </header><!-- #header -->
-<div class="container"> 
+<div class="container">
+	<center>
+		<br>
+		<div class="column">
+			<h1>Welcome to our quizes</h1>
+		</div>
+	</center>
+</div>
 <div class="row">
-<div class="col-sm-3"></div>
-<div class="col-sm-6"><h1>Welcome to CodeML Quiz!!!</h1></div>
-<div class="col-sm-2"></div>
- </div>
- 
-<div class="row">
 
    
-   <div class="col-sm-3">
-   
-<a href="#" class="action-button shadow animate blue">Multiple Matching</a>
-
-
-</div>
-
-<div class="col-sm-3">
- 
-   
-<a href="#" class="action-button shadow animate red">Foss Matching</a>
-
-
-
-</div>
-
-<div class="col-sm-3">
- 
-<a href="#" class="action-button shadow animate green">Card Matching</a>
-
-
-</div>
-
-<div class="col-sm-3">
- 
-<a href="#" class="action-button shadow animate yellow">Word Matching</a>
-</div>
-
+	<div class="col-sm-3">   
+	<a href="quizes/quiz1/index.php" class="action-button shadow animate blue">Multiple Matching</a>
+	</div>
+	<div class="col-sm-3">	   
+	<a href="quizes/quiz2/quiz2.html" class="action-button shadow animate green">Foss Matching</a>
+	</div>
+	<div class="col-sm-3">
+	<a href="quizes/quiz3/quiz3.html" class="action-button shadow animate red">Card Matching</a>
+	</div><div class="col-sm-3">
+	<a href="#" class="action-button shadow animate yellow">Card Matching</a>
+	</div>
  </div>
 </div>
+<br id="contuctus">
 
 
 
-
- <section id="contact">
-    <div class="container wow fadeInUp">
+ <section id="contact" >
+    <div class="container wow fadeInUp" >
       <div class="row">
         <div class="col-md-12">
           <h3 class="section-title">Contact Us</h3>
           <div class="section-title-divider"></div>
-          <p class="section-description">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+          <p class="section-description">This website provides a great opportunity to learn different languages of web development and help to reach your goals effective way</p>
         </div>
       </div>
       
@@ -123,10 +109,10 @@
           </div>
         </div>        
         <div class="col-md-5">
-          <div class="form">
+          <div class="form" >
             <div id="sendmessage">Your message has been sent. Thank you!</div>
             <div id="errormessage"></div>
-            <form action="" method="post" role="form" class="contactForm">
+            <form action="../contuctus.php" method="post" role="form" class="contactForm">
                 <div class="form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
                   <div class="validation"></div>
@@ -147,7 +133,7 @@
             </form>
           </div>
         </div> 
-        <div class="col-md-4">>
+        <div class="col-md-4">
           <img src="img/masonry_02-750x534.jpg" alt="Inha">
         </div>
       </div>

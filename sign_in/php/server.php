@@ -11,15 +11,14 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 			}
 			$firstName =  $_POST['jsfname'];
 			$lastName =  $_POST['jslname'];
-			$genderSelectionName =  $_POST['jsgender'];
 			$PhoneNumber =  $_POST['jsphone'];
 			$email =  $_POST['jsemail'];
 			$userName =  $_POST['jsusername'];
 			$password =  $_POST['jspassword'];
 
-			$query = "INSERT INTO user_info";
-			$query .= "(first_name,last,gender_selection,phone_number,email,user_name, password)";
-			$query .= "VALUES('{$firstName}','{$lastName}','{$genderSelectionName}','{$PhoneNumber}','{$email}','{$userName}','{$password}')";
+			$query = "INSERT INTO users";
+			$query .= "(first_name, last, phone_number, email, user_name, password)";
+			$query .= "VALUES('{$firstName}','{$lastName}', '{$PhoneNumber}','{$email}','{$userName}','{$password}')";
 			mysqli_query($connection, $query);
 			mysqli_close($connection);
 		}

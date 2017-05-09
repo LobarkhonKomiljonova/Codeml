@@ -1,3 +1,7 @@
+<?php
+
+if (isset($_SESSION["user"]) && ($_SESSION["user"]==1)) {
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,11 +46,21 @@
       <!-- #nav-menu-container -->
       <nav id="nav-menu-container">
         <ul class="nav-menu">
-          <li><a href="../../index.html">Home</a></li>
+          <li><a href="question.php">ADD</a></li>
+          <li><a href="../../index.php">Home</a></li>
           <li><a href="">Questions</a></li>
           <li><a href="../../editor.html">Editor</a></li>
           <li><a href="../../quiz">Quiz</a></li>
+          <li><a href="logout.php">Logout</a></li>
+          <li><i class="fa fa-user fa" style="font-size: 20px; color: blue;" aria-hidden="true"><a href="#"><?php echo $_SESSION["user_name"];?></a> </i></li>
         </ul>
       </nav>
     </div>
   </div>
+
+<?php
+}
+elseif (!isset($_SESSION["user"]) || $_SESSION["user"]!=1) {
+header("Location: ../../copied/signin.php");
+}
+?>

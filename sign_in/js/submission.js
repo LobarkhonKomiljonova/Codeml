@@ -1,50 +1,52 @@
-$(function(){
-	$("#submitbtn").click(function(){
-		SendData();	
+/***************************************************/
+$('document').ready(function(){
+	$("#submitbtn").click(function(e){
+		$.ajax({
+			url:"../php/server.php",
+			type:"POST",
+			dataType:"json",
+			data:{
+				"data":"sign",
+				jsfname: $("#name").val(),
+				jslname: $("#surname").val(),
+				jsgender: $("#gender").val(),
+				jsphone: $("#phone").val(),
+				jsemail: $("#email").val(),
+				jsusername: $("#username").val(),
+				jspassword: $("#password").val()
+			},
+			success:function(data){
+				data.preventDefault();
+			}
+		});
 	});
-});
-
-function Validation(ev)
-{
 	
-}
-
-function SendData() {
-	var first_name = $("#firstNameID").val();
-	var last_name = $("#LastName").val();
-	var gender = $("#genderSelectionID").val();
-	var Date_of_birth = $("#dob").val();
-	var phone = $("#phone").val();
-	var email = $("#email").val();
-	var username = $("#username").val();
-	var password = $("#password").val();
-	$.ajax({
-		method: "POST",
-		url: "./php/log_in.php",
-		//dataType: "json",
-		data: {
-			jsfname: first_name,
-			jslname: last_name,
-			jsgender: gender,
-			jsDOB: Date_of_birth,
-			jsphone: phone,
-			jsemail: email,
-			jsusername: username,
-			jspassword: password 
+/***************************************************/
+	$('#name').bind('keyup blur',function(){ 
+	    $(this).val( $(this).val().replace(/[^A-Za-z]/ig,'') ); }
+	);
+/***************************************************/
+	$('#surname').bind('keyup blur',function(){ 
+	    $(this).val( $(this).val().replace(/[^A-Za-z]/ig,'') ); }
+	);
+/***************************************************/
+	$('#phone').bind('keyup blur',function(){ 
+	    $(this).val( $(this).val().replace(/[^\+0-9]/g,'') ); }
+	);
+/***************************************************/
+	$('#confirm').keyup(function(){
+		if($(this).val()!=$('#password').val())
+		{
+			// alert($("#confirm").val());
+			$('#none').slideDown();
 		}
-	}).done(function(data) {
-		alert("You are succesfully regisrtered!!!");
-		 console.log(data);
-	}).fail(function(arg1, arg2){
-		alert("There was some problem on connecting to our database please sign up one more time");
-		console.log(arg1, arg2);
-	});
-}
-
-$(document).ready(function(){
-	$( "#confirm" ).keypress(function(arg) {
-		if (arg.keyCode == 13) {
-			SendData();
+		if($(this).val()==$('#password').val())
+		{
+			// alert($("#password").val());
+			$('#none').slideUp();
 		}
-	});
+
+
+	})
+		
 });

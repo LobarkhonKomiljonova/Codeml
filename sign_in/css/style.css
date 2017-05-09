@@ -1,8 +1,6 @@
-.bodyOfForm
+body
 {
-	/*background:url('../pictures/black.jpg')fixed;*/
-	border-radius: 10px;
-    background-color: rgba(5, 217, 111, 0.79);
+	background:url('../../images/back.jpg')fixed;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -13,7 +11,7 @@
 }
 .scrolBarOfForm
 {
-	background-color: rgba(255, 255, 255, 0.99);
+	background-color: rgba(255, 255, 255, 0.95);
 	margin-left: 20%;
 	margin-right: 25%;
 	margin-top: 10%;
@@ -31,10 +29,9 @@
 .inputTypeText, .inputTypePass
 {
 	border-radius: 5px;
-	margin-left:;
 	font-size: 20px;
 	background-color: rgba(0,0,0 0.9);	
-	width: 80%;
+	width: 100%;
 }
 .labelMargin
 {
@@ -53,11 +50,7 @@ input[type=radio] {
 	margin-left:;
 	font-size: 20px;
 }
-.genderSelectionClass
-{
-	margin-left: ;
 
-}
 .submissionOfFormClass
 {
 	margin-bottom: 8%;
@@ -78,16 +71,133 @@ input[type=radio] {
 	height: 2.9em;
 	margin-bottom: 8%;
 }
-.greevDiv
-{
-	color: green;
-}
 .iconSizing
 {
-	color: rgba(5, 217, 111, 0.79);
+	color: #31708f
 	font-size: 20px;	
 }
 .submissionOfFormClass
 {
-	width:90%;
+	width:88%;
 }
+#Question, #type, #coqust
+{
+	width: 100%;
+	background-color: rgba(255, 255, 255, 0.95);
+}
+#send_question, #b2disp
+{
+	width: 48%;
+}
+#send_question
+{
+	float: right;
+}
+#coqust
+{
+	overflow: scroll;
+	display: none;
+}
+#num_answers
+{
+	text-align: center;
+	border-right: solid;
+	margin-top: 1%;
+	margin-bottom: 1%;
+	height: 30px;
+	border-color: #31708f;
+	width: 15%;
+	margin-right: 2%;
+	float: left;
+	position: relative;
+}
+#q_relation
+{
+	position: relative;
+	padding-left: 2%;
+	color: red;
+	margin-top: 2%;
+	margin-bottom: 2%;
+	width: 70%;
+	margin-left: 5%;
+	margin-right: 5%;
+	float: left;
+}
+.main, .sub
+{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.main
+{
+	/* border-style: solid;
+	border-color: rgba(78, 155, 56, 0.8); */
+	margin-bottom: 10%;
+	margin-top: 10%;
+}
+.check
+{
+	padding-top: 3%;
+}
+.date_time
+{
+	float:left;
+}
+.f_right
+{
+	width: 80%;
+}
+.user
+{
+	font-size: 30px;
+}
+.time
+{
+	float: right;
+}
+.code
+{
+	padding-left: 5px;
+	border-radius: 5px;
+	background-color: #31708f;
+}
+.answer
+{
+	font-size: 30px;	
+}
+#answer
+{
+	display: none;
+}
+.odsbtn
+{
+	margin-bottom: 15%;
+}
+.input
+{
+	border-radius: 5px;
+	font-size: 20px;
+	background-color: rgba(0,0,0 0.9);	
+	width: 80%;
+}
+.shr 
+{
+	overflow: auto;
+	border-style: solid;
+	border-color: #31708f;
+	position: relative;
+	border-radius: 5px;
+}
+.numans
+{
+	top: 0;
+	font-size: 8px;
+	margin-left: 3%;
+}
+#header
+{
+	width: 100%;
+	top: 0;
+	position: fixed;
+}
+/*dtm.uz/o'tishballari*/
